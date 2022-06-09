@@ -16,7 +16,7 @@ Character.prototype.createBranch = function(points, challenge){
 Character.prototype.oneRoll = function (challenge = 0, roll = 1, fails = 0, points = this.skill) {
     let sum = 0;
 
-    //check for edge cases
+    //check for edge cases PRZENIEŚĆ BEFORE ONE ROLL
     if (this.attribute - challenge <= 0) console.log('-1 Dice');
     else if (this.attribute - challenge > 20) console.log('legendary statistic'); //zmniejsz statystykę do rzutu
     else var probArr = this.createBranch(points, challenge); //try catch
